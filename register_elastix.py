@@ -118,7 +118,8 @@ def process_segs(moving_paths: list, reg_tmp_dir: pathlib.Path, copy_dst_dir: pa
                 f_tp_label.writelines(lines)
 
         # elastix command
-        command = f'{transformix} -in {moving_path} -tp {tp_label} -out {output_dir}'
+        # use "-def all" to transform all points from the input-image, which effectively generates a deformation field.
+        command = f'{transformix} -def all -in {moving_path} -tp {tp_label} -out {output_dir}'
         print(f'elastix command: {command}')
 
         p = subprocess.Popen(command)

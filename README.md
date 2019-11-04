@@ -19,3 +19,6 @@ Collection of my tool scripts
 
 - register_sitk.py
 \- registration using SimpleITK.
+
+- DicomSeriesReader.py
+\- read DICOM series using SimpleITK.
