@@ -22,3 +22,6 @@ Collection of my tool scripts
 
 - [DicomSeriesReader.py](https://github.com/kernel1994/tool-scripts/blob/master/DicomSeriesReader.py)
 \- read DICOM series using SimpleITK.
+
+- [csv_tools.py](https://github.com/kernel1994/tool-scripts/blob/master/csv_tools.py)
+\- read, write and append rows to csv file.
