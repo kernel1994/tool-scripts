@@ -25,3 +25,6 @@ Collection of my tool scripts
 
 - [csv_tools.py](https://github.com/kernel1994/tool-scripts/blob/master/csv_tools.py)
 \- read, write and append rows to csv file.
+
+- [ptar.py](https://github.com/kernel1994/tool-scripts/blob/master/ptar.py)
+\- Compress files and dirs to .tar.gz, or uncompress .tar.gz file.
