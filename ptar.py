@@ -45,13 +45,11 @@ def tarc(args: argparse.Namespace):
     arg_files_str = ' '.join(args.files)
 
     cmd = f'tar -czvf {tar_file} {arg_files_str}'
-    print(f'* run command: {cmd}\n')
-    os.system(cmd)
+    exec_cmd(cmd)
 
     if args.delete:
         cmd = f'rm -r {arg_files_str}'
-        print(f'* run command: {cmd}\n')
-        os.system(cmd)
+        exec_cmd(cmd)
 
 
 def tarx(args: argparse.Namespace):
@@ -63,19 +61,21 @@ def tarx(args: argparse.Namespace):
     if args.name:
         if not os.path.exists(args.name):
             cmd = f'mkdir {args.name}'
-            print(f'* run command: {cmd}\n')
-            os.system(cmd)
+            exec_cmd(cmd)
         cmd = f'tar -xzvf {tar_file} -C {args.name}'
 
     else:
         cmd = f'tar -xzvf {tar_file}'
-    print(f'* run command: {cmd}\n')
-    os.system(cmd)
+    exec_cmd(cmd)
 
     if args.delete:
         cmd = f'rm {tar_file}'
-        print(f'* run command: {cmd}\n')
-        os.system(cmd)
+        exec_cmd(cmd)
+
+
+def exec_cmd(cmd: str):
+    print(f'\n* run command: {cmd}\n')
+    os.system(cmd)
 
 
 def main():
